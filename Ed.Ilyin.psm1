@@ -1,9 +1,9 @@
 function Get-EiPreparedForDebugging {
   process {
-    $DebugPreference = 'Continue'
-    $ErrorActionPreference = 'Stop'
-    $InformationPreference = 'Continue'
-    $VerbosePreference = 'Continue'
+    $Global:DebugPreference = 'Continue'
+    $Global:ErrorActionPreference = 'Stop'
+    $Global:InformationPreference = 'Continue'
+    $Global:VerbosePreference = 'Continue'
     $PSScriptRoot -replace '^(.+)/.+?$', '$1' | Set-Location
   }
 }
